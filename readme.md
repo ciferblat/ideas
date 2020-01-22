@@ -10,3 +10,16 @@
 ### Выпуск сертификата LetsEncrypt
 
 https://github.com/Neilpang/acme.sh
+
+```code
+sudo su
+apt-get install socat
+curl https://get.acme.sh | sh
+```
+
+закрываем терминал и открываем заново
+
+```code
+sudo su
+acme.sh --issue -d mysite.ru -d www.mysite.ru -d api.mysite.ru --standalone
+```
