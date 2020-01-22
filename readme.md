@@ -5,3 +5,8 @@
 
 ```code
  git config --local core.sshCommand "ssh -i ~/.ssh/id_rsa"
+```
+
+### Выпуск сертификата LetsEncrypt
+
+https://github.com/Neilpang/acme.sh
