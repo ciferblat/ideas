@@ -67,3 +67,7 @@ acme.sh --issue -d mysite.ru -d www.mysite.ru -d api.mysite.ru --standalone
   ]
 }
 ```
+
+### Пример disclaimer'а по услуге
+
+https://dxtra.markets.reuters.com/Dx/DxnHtm/Pub_Docs/legal.htm
