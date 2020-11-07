@@ -1,11 +1,28 @@
-### Несколько deplayment keys на одном компьютере (для разных репозиториев)
+### Несколько deployment keys на одном компьютере (для разных репозиториев)
 
 Необходимо зайти в папку с репозиторием.
-Далее в ней прописать путь к закрытому ключу:
+
+Создаем новый delployment key:
 
 ```code
- git config --local core.sshCommand "ssh -i ~/.ssh/id_rsa"
+ssh-keygen -t rsa -b 4096 -C "s.pronyakin@gmail.com"
 ```
+
+При сохранении выбрать другой путь к файлу, например: <code>/home/dev/.ssh/id_rsa_autodoc</code>
+
+Далее в той же папке прописать путь к закрытому ключу:
+
+```code
+ git config --local core.sshCommand "ssh -i ~/.ssh/id_rsa_autodoc"
+```
+
+Далее открытый ключ из файла:
+
+```code
+cat ~/.ssh/id_rsa_autodoc.pub
+```
+
+добавить в настройки репозитория на github в Settings - Deploy keys
 
 ### Выпуск сертификата LetsEncrypt
 
